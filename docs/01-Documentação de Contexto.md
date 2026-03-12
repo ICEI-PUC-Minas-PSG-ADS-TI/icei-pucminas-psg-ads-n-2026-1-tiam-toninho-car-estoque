@@ -1,46 +1,95 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O projeto Toninho Car Estoque consiste no desenvolvimento de um aplicativo mobile para auxiliar a gestão de estoque de uma mecânica automotiva. A proposta surgiu a partir da necessidade de organizar o controle de peças e produtos utilizados no dia a dia da oficina, permitindo um acompanhamento mais eficiente das entradas, saídas, preços e movimentações do estoque.
+
+Atualmente, negócios desse tipo costumam enfrentar dificuldades no controle interno quando as informações não estão centralizadas em um único sistema. Isso pode afetar a organização dos produtos, a atualização de preços, o registro das peças utilizadas nos serviços e o acompanhamento do que realmente entrou ou saiu do estoque.
+
+Diante disso, o projeto propõe a criação de uma aplicação voltada para a rotina da mecânica Toninho Car, com foco em praticidade, controle e rapidez no acesso às informações. O sistema será estruturado com diferentes níveis de acesso, contemplando as necessidades do administrador e dos funcionários, de forma simples e funcional.
+
+O aplicativo será desenvolvido para uso em ambiente mobile, permitindo melhor adaptação à rotina da oficina e facilitando o uso em tempo real durante os atendimentos e movimentações de peças.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+A mecânica Toninho Car necessita de um controle mais organizado e confiável sobre as peças e produtos utilizados em sua operação diária. Atualmente, a falta de um sistema centralizado pode gerar dificuldades no cadastro de produtos, na alteração de preços, na baixa de itens utilizados, na consulta rápida de peças disponíveis e no acompanhamento das movimentações do estoque.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+Esse cenário compromete a gestão do negócio, pois dificulta o controle sobre o que entrou, o que saiu, quanto cada item custa e quais produtos estão com quantidade baixa. Além disso, a ausência de um histórico estruturado pode gerar perda de informação, falhas operacionais e dificuldades para tomada de decisão.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Outro ponto relevante é a necessidade de registrar o uso dos produtos nos serviços realizados, por meio de uma ficha do carro, permitindo que a oficina tenha melhor rastreabilidade sobre as peças utilizadas em cada atendimento.
+
+Assim, o problema identificado está na ausência de uma solução mobile que permita à mecânica controlar, consultar e registrar as informações do estoque de forma rápida, organizada e segura.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Objetivo Geral
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Desenvolver um aplicativo mobile para a mecânica Toninho Car, com a finalidade de gerenciar o estoque de peças e produtos, controlar preços, registrar movimentações e apoiar a rotina administrativa e operacional da empresa.
+
+Objetivos Específicos
+
+- Criar um sistema com acesso diferenciado para administrador e funcionários.
+
+- Permitir o cadastro, exclusão e atualização de produtos e preços.
+
+- Registrar entrada e saída de peças do estoque.
+
+- Disponibilizar consulta rápida de produtos cadastrados.
+
+- Permitir a criação de ficha do carro para acompanhamento dos itens utilizados.
+
+- Exibir alertas de estoque baixo para facilitar o controle de reposição.
+
+- Gerar histórico de movimentações e relatórios de entrada, saída e valores.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A criação do Toninho Car Estoque é importante porque a gestão de estoque é uma atividade essencial para o funcionamento adequado de uma mecânica. Quando o controle de peças e produtos não é feito de forma estruturada, a empresa pode enfrentar dificuldades para manter a organização interna, acompanhar o consumo dos itens e controlar os valores praticados.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+No caso da mecânica Toninho Car, foi identificada a necessidade de um sistema que permita organizar as informações do estoque em um único ambiente, com acesso prático pelo celular e funcionalidades adequadas à rotina do negócio. O cliente demonstrou interesse em recursos que atendam tanto à gestão administrativa quanto às atividades operacionais, como alteração de preços, retirada de produtos, consulta de peças e registro por ficha de veículo.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A proposta se justifica, portanto, pela necessidade real de melhorar o controle interno da oficina, reduzir falhas manuais, facilitar a consulta de informações e oferecer relatórios que apoiem o acompanhamento do estoque e dos valores movimentados.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo do aplicativo é composto pelos profissionais que atuam diretamente na rotina da mecânica Toninho Car e que precisam acessar informações relacionadas ao estoque.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+O primeiro perfil é o administrador, responsável pelo gerenciamento mais amplo do sistema. Esse usuário terá acesso às funcionalidades de cadastro, exclusão de produtos, alteração de preços e acompanhamento geral das informações registradas. Trata-se de um perfil com maior responsabilidade sobre o controle do negócio e necessidade de acesso completo ao sistema.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O segundo perfil é o dos funcionários da oficina, que utilizarão o aplicativo de forma mais operacional. Esses usuários precisarão consultar produtos, remover unidades de peças do estoque e registrar informações relacionadas à ficha do carro. Para esse perfil, a aplicação deve ser simples, rápida e objetiva, já que o uso ocorrerá dentro de uma rotina prática de trabalho.
+
+De forma geral, o sistema será direcionado a usuários que precisam de uma ferramenta intuitiva, com navegação simples e acesso rápido às informações, sem exigir conhecimento técnico avançado.
+
+Personas
+
+Persona 1 – Administrador
+
+- Responsável pela gestão da mecânica
+
+- Precisa cadastrar produtos, alterar preços e acompanhar relatórios
+
+- Busca maior controle e organização do estoque
+
+Persona 2 – Funcionário
+
+- Atua na rotina operacional da oficina
+
+- Precisa consultar produtos, registrar retirada de peças e preencher ficha do carro
+
+- Busca agilidade e praticidade no uso do sistema
+
+Mapa de Stakeholders
+
+Stakeholders principais:
+
+- Administrador da mecânica
+
+- Funcionários da oficina
+
+- Cliente responsável pela validação do projeto
+
+- Equipe desenvolvedora do sistema
+
+Stakeholders indiretos:
+
+- Fornecedores de peças
+
+- Clientes finais da mecânica, beneficiados por uma operação mais organizada
