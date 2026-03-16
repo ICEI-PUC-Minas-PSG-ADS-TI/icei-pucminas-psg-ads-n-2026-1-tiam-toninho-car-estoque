@@ -1,7 +1,5 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 Esta seção apresenta a especificação do projeto **Toninho Car Estoque** com foco na forma como os usuários irão interagir com a aplicação no contexto real da mecânica. A partir das necessidades levantadas junto ao cliente, foram definidos os perfis de usuários, as histórias de usuário, os requisitos funcionais e não funcionais, as restrições do projeto, o diagrama de casos de uso, a matriz de rastreabilidade e os elementos básicos de gerenciamento do projeto.
 
 O sistema será desenvolvido como uma aplicação mobile voltada para o controle de estoque da mecânica **Toninho Car**, permitindo o cadastro e exclusão de produtos, controle de preços, registro de entrada e saída de peças, consulta rápida de itens, preenchimento da ficha do carro, histórico de movimentações, alerta de estoque baixo e geração de relatórios.
