@@ -2,144 +2,204 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Esta seção apresenta a especificação do projeto **Toninho Car Estoque** com foco na forma como os usuários irão interagir com a aplicação no contexto real da mecânica. A partir das necessidades levantadas junto ao cliente, foram definidos os perfis de usuários, as histórias de usuário, os requisitos funcionais e não funcionais, as restrições do projeto, o diagrama de casos de uso, a matriz de rastreabilidade e os elementos básicos de gerenciamento do projeto.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+O sistema será desenvolvido como uma aplicação mobile voltada para o controle de estoque da mecânica **Toninho Car**, permitindo o cadastro e exclusão de produtos, controle de preços, registro de entrada e saída de peças, consulta rápida de itens, preenchimento da ficha do carro, histórico de movimentações, alerta de estoque baixo e geração de relatórios.
+
+Para a elaboração desta especificação, foram utilizadas as seguintes técnicas e ferramentas:
+- levantamento de requisitos por meio de conversa direta com o cliente;
+- definição de personas com base nos perfis reais de uso da aplicação;
+- construção de histórias de usuário para representar as necessidades dos usuários;
+- identificação e organização dos requisitos funcionais e não funcionais;
+- priorização de requisitos com apoio da técnica **MoSCoW**;
+- modelagem textual do diagrama de casos de uso;
+- criação da matriz de rastreabilidade para alinhar objetivos, histórias e requisitos;
+- organização inicial das atividades da equipe e estimativa de orçamento do projeto.
+
+---
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+### Persona 1 – Antônio
+Antônio tem 42 anos, é o dono da mecânica **Toninho Car** e acompanha diretamente a rotina do negócio, desde o atendimento até a organização interna da oficina. Ele precisa de uma aplicação simples e confiável para controlar os produtos cadastrados, atualizar preços, registrar entradas e saídas e consultar relatórios, pois deseja manter o estoque organizado e ter mais segurança nas informações utilizadas na gestão da mecânica.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+### Persona 2 – Carol
+Carol tem 31 anos e atua no setor administrativo da mecânica, auxiliando no controle interno e na conferência das informações do estoque. Ela precisa acessar dados organizados, acompanhar preços, consultar produtos e verificar movimentações, pois sua função exige apoio à administração e maior clareza no acompanhamento das informações registradas no sistema.
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+### Persona 3 – Antoni
+Antoni tem 27 anos e trabalha como funcionário da oficina, participando da rotina operacional dos serviços realizados nos veículos. Ele precisa consultar produtos com rapidez, verificar a quantidade disponível, remover unidades do estoque e preencher a ficha do carro, pois utiliza peças durante os atendimentos e precisa registrar essas informações sem atrapalhar o andamento do trabalho.
+
+---
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise das personas, foram identificadas as seguintes histórias de usuário para o projeto **Toninho Car Estoque**:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR` |
+|----------------------|------------------------------------|--------------------------|
+| Administrador | realizar login com perfil administrativo | acessar as funcionalidades de gerenciamento do sistema |
+| Administrador | cadastrar novos produtos | manter o estoque atualizado |
+| Administrador | excluir produtos | remover itens que não são mais utilizados |
+| Administrador | cadastrar preços dos produtos | garantir o controle correto dos valores |
+| Administrador | alterar preços dos produtos | atualizar os valores sempre que necessário |
+| Administrador | registrar entrada de peças | controlar o que foi adicionado ao estoque |
+| Administrador | visualizar o histórico de movimentações | acompanhar tudo o que foi registrado no sistema |
+| Administrador | receber alerta de estoque baixo | planejar a reposição de produtos |
+| Administrador | gerar relatório de entrada e saída | acompanhar a movimentação quantitativa das peças |
+| Administrador | gerar relatório de valores | acompanhar os valores movimentados no estoque |
+| Funcionário | realizar login com perfil de funcionário | acessar apenas as funções permitidas para minha rotina |
+| Funcionário | consultar produtos cadastrados | localizar rapidamente as peças disponíveis |
+| Funcionário | visualizar a quantidade disponível de um produto | saber se há item suficiente para uso |
+| Funcionário | remover unidade de produto do estoque | registrar a utilização da peça no serviço realizado |
+| Funcionário | criar ficha do carro | associar os itens utilizados a um veículo atendido |
+| Funcionário | consultar ficha do carro | verificar os registros vinculados ao atendimento |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
-
+---
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+Os requisitos do projeto foram definidos com base nas histórias de usuário e organizados em requisitos funcionais e requisitos não funcionais. Para determinar a prioridade de cada item, foi utilizada a técnica **MoSCoW**, que permite classificar os requisitos conforme sua importância para a primeira versão da aplicação.
+
+A técnica foi aplicada da seguinte forma:
+- requisitos essenciais para o funcionamento inicial do sistema foram classificados como **ALTA**;
+- requisitos importantes, mas não críticos para a primeira entrega, foram classificados como **MÉDIA**;
+- requisitos desejáveis, porém complementares, foram classificados como **BAIXA**.
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade | Responsável |
-|------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | Aluno X |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | Aluno Y |
+| ID | Descrição do Requisito | Prioridade | Responsável |
+|------|-----------------------------------------|----|----|
+| RF-001 | Permitir que o usuário realize login no sistema conforme seu perfil de acesso | ALTA | Equipe |
+| RF-002 | Permitir que o administrador cadastre produtos no estoque | ALTA | Equipe |
+| RF-003 | Permitir que o administrador exclua produtos cadastrados | ALTA | Equipe |
+| RF-004 | Permitir que o administrador cadastre preços dos produtos | ALTA | Equipe |
+| RF-005 | Permitir que o administrador altere os preços dos produtos | ALTA | Equipe |
+| RF-006 | Permitir registrar entrada de produtos no estoque | ALTA | Equipe |
+| RF-007 | Permitir registrar saída de produtos do estoque | ALTA | Equipe |
+| RF-008 | Permitir que o funcionário remova unidade de produto do estoque | ALTA | Equipe |
+| RF-009 | Permitir consulta rápida dos produtos cadastrados | ALTA | Equipe |
+| RF-010 | Exibir a quantidade disponível de cada produto | ALTA | Equipe |
+| RF-011 | Permitir criar ficha do carro | ALTA | Equipe |
+| RF-012 | Permitir consultar ficha do carro | MÉDIA | Equipe |
+| RF-013 | Registrar histórico de movimentações de entrada e saída | ALTA | Equipe |
+| RF-014 | Emitir alerta de estoque baixo | MÉDIA | Equipe |
+| RF-015 | Gerar relatório com valores movimentados no estoque | MÉDIA | Equipe |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
+| ID | Descrição do Requisito | Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis | ALTA |
+| RNF-002 | O sistema deve possuir interface simples, intuitiva e adequada ao ambiente de oficina | ALTA |
+| RNF-003 | O sistema deve processar as principais requisições do usuário em no máximo 3 segundos | MÉDIA |
+| RNF-004 | O sistema deve controlar o acesso às funcionalidades de acordo com o perfil autenticado | ALTA |
+| RNF-005 | O sistema deve manter consistência dos dados nas movimentações de entrada e saída | ALTA |
+| RNF-006 | O sistema deve apresentar informações legíveis e organizadas em telas de celular | ALTA |
+| RNF-007 | O sistema deve permitir manutenção e evolução futura da aplicação | MÉDIA |
+| RNF-008 | O sistema deve registrar as movimentações de forma confiável para consulta posterior | ALTA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+---
 
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+| ID | Restrição |
+|----|-----------|
+| 01 | O projeto deverá ser entregue até o final do semestre |
+| 02 | Não pode ser desenvolvido um módulo de backend |
+| 03 | A primeira versão do sistema será focada em ambiente mobile |
+| 04 | O escopo inicial estará limitado às funcionalidades levantadas junto ao cliente |
+| 05 | O sistema trabalhará inicialmente com apenas dois perfis de acesso: administrador e funcionário |
+| 06 | O projeto deverá utilizar ferramentas gratuitas ou disponíveis em contexto acadêmico |
+| 07 | Funcionalidades não validadas com o cliente não farão parte da primeira entrega |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+---
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+O diagrama de casos de uso representa as interações entre os atores do sistema e as funcionalidades centrais da aplicação **Toninho Car Estoque**. Foram identificados dois atores principais: **Administrador** e **Funcionário**, cada um com permissões específicas de acordo com sua responsabilidade dentro da mecânica.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
+![Diagrama de Caso de Uso](img/caso_uso_toninho_car_estoque.png)
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+### Descrição sucinta dos atores e casos de uso
+
+| Ator / Caso de Uso | Descrição |
+|---|---|
+| Administrador | Usuário responsável pelo gerenciamento do estoque, cadastro de produtos, controle de preços e relatórios |
+| Funcionário | Usuário responsável pelas operações de consulta, retirada de peças e preenchimento da ficha do carro |
+| Realizar login | Permite acesso ao sistema com autenticação e controle de perfil |
+| Cadastrar produto | Permite incluir novos itens no estoque |
+| Excluir produto | Permite remover itens que não serão mais utilizados |
+| Cadastrar preço | Permite informar o valor inicial do produto |
+| Alterar preço | Permite atualizar o valor de um produto já cadastrado |
+| Registrar entrada de estoque | Permite lançar novos produtos ou reposições no estoque |
+| Registrar saída de estoque | Permite registrar a retirada de itens do estoque |
+| Consultar produtos | Permite pesquisar e visualizar produtos cadastrados |
+| Visualizar quantidade disponível | Permite verificar o saldo atual de cada item |
+| Criar ficha do carro | Permite registrar veículo e itens utilizados em determinado serviço |
+| Consultar ficha do carro | Permite visualizar fichas já registradas |
+| Visualizar histórico de movimentações | Permite rastrear entradas e saídas registradas |
+| Receber alerta de estoque baixo | Permite identificar necessidade de reposição |
+| Gerar relatório de valores | Permite acompanhar financeiramente os itens movimentados |
+
+---
 
 # Matriz de Rastreabilidade
 
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
+A matriz de rastreabilidade relaciona os objetivos do sistema, as histórias de usuário e os requisitos especificados, garantindo alinhamento entre a necessidade do usuário e a funcionalidade prevista na solução.
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+| Objetivo do Sistema | História de Usuário Relacionada | Requisito(s) Relacionado(s) |
+|---|---|---|
+| Controlar o acesso ao sistema por perfil | Como administrador, quero realizar login com perfil administrativo para acessar as funcionalidades de gerenciamento do sistema | RF-001, RNF-004 |
+| Controlar o acesso ao sistema por perfil | Como funcionário, quero realizar login com perfil de funcionário para acessar apenas as funções permitidas para minha rotina | RF-001, RNF-004 |
+| Manter o estoque atualizado | Como administrador, quero cadastrar novos produtos para manter o estoque atualizado | RF-002 |
+| Remover itens sem uso | Como administrador, quero excluir produtos para remover itens que não são mais utilizados | RF-003 |
+| Garantir controle correto dos preços | Como administrador, quero cadastrar preços dos produtos para garantir o controle correto dos valores | RF-004 |
+| Atualizar valores sempre que necessário | Como administrador, quero alterar preços dos produtos para atualizar os valores sempre que necessário | RF-005 |
+| Registrar entrada de peças | Como administrador, quero registrar entrada de peças para controlar o que foi adicionado ao estoque | RF-006, RF-013 |
+| Registrar saída de produtos utilizados | Como funcionário, quero remover unidade de produto do estoque para registrar a utilização da peça no serviço realizado | RF-007, RF-008, RF-013 |
+| Localizar produtos rapidamente | Como funcionário, quero consultar produtos cadastrados para localizar rapidamente as peças disponíveis | RF-009 |
+| Verificar disponibilidade de item | Como funcionário, quero visualizar a quantidade disponível de um produto para saber se há item suficiente para uso | RF-010 |
+| Relacionar peças ao atendimento | Como funcionário, quero criar ficha do carro para associar os itens utilizados a um veículo atendido | RF-011 |
+| Consultar registros de atendimento | Como funcionário, quero consultar ficha do carro para verificar os registros vinculados ao atendimento | RF-012 |
+| Acompanhar histórico do estoque | Como administrador, quero visualizar o histórico de movimentações para acompanhar tudo o que foi registrado no sistema | RF-013, RNF-008 |
+| Planejar reposição de itens | Como administrador, quero receber alerta de estoque baixo para planejar a reposição de produtos | RF-014 |
+| Acompanhar movimentação financeira | Como administrador, quero gerar relatório de valores para acompanhar os valores movimentados no estoque | RF-015 |
+| Garantir usabilidade no contexto real de uso | Como funcionário, quero consultar produtos cadastrados para localizar rapidamente as peças disponíveis | RNF-001, RNF-002, RNF-003, RNF-006 |
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
+---
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
-
-<!--
-## Gerenciamento de Tempo
-
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
-
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
-
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
-
-![Gráfico de Gantt](img/02-grafico-gantt.png)
--->
+De acordo com o PMBoK v6, o gerenciamento de projetos envolve diferentes áreas integradas, como escopo, tempo, custos, qualidade, recursos e partes interessadas. No contexto do projeto **Toninho Car Estoque**, o gerenciamento será conduzido com foco na organização da equipe, no planejamento das atividades e no uso de recursos compatíveis com o contexto acadêmico do projeto.
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+O gerenciamento da equipe será orientado pela divisão das atividades em etapas, permitindo melhor controle das entregas e distribuição equilibrada das responsabilidades entre os integrantes. Como o projeto envolve levantamento de requisitos, documentação, prototipação, desenvolvimento e testes, será necessário adotar uma dinâmica colaborativa, com acompanhamento contínuo da evolução das tarefas.
 
-![Simple Project Timeline](img/02-project-timeline.png)
+A equipe atuará no levantamento e validação dos requisitos com base nas informações fornecidas pelo cliente, na documentação do projeto e atualização do repositório, na modelagem das telas e fluxo de navegação, no desenvolvimento da aplicação mobile, nos testes das funcionalidades e na preparação da apresentação final.
+
+| Área de Atuação | Responsabilidades |
+|---|---|
+| Análise de Requisitos | levantamento das necessidades, organização das histórias de usuário, definição e revisão dos requisitos |
+| Documentação | produção e manutenção dos documentos do projeto e organização do GitHub |
+| UX/UI | criação de esboços, definição de fluxo de navegação e melhoria da experiência de uso |
+| Desenvolvimento | implementação da aplicação e das funcionalidades priorizadas |
+| Testes e Validação | verificação do funcionamento do sistema e identificação de ajustes necessários |
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+A gestão de orçamento do projeto considera o contexto de um trabalho acadêmico, no qual a equipe utilizará recursos próprios e ferramentas gratuitas. Dessa forma, o custo financeiro direto do projeto é reduzido, concentrando-se principalmente no esforço de desenvolvimento, organização e testes.
 
-![Orçamento](img/02-orcamento.png)
+O projeto será desenvolvido com ferramentas gratuitas ou gratuitas para fins acadêmicos, os integrantes utilizarão seus próprios computadores e dispositivos móveis, não haverá contratação de serviços pagos para a primeira versão e a proposta atual contempla o desenvolvimento de um protótipo funcional.
+
+| Item | Descrição | Custo Estimado |
+|---|---|---|
+| Ambiente de desenvolvimento | uso de editor de código, bibliotecas e framework React | R$ 0,00 |
+| Repositório e versionamento | uso do GitHub Classroom | R$ 0,00 |
+| Prototipação e diagramas | uso de ferramentas gratuitas como Figma, Draw.io ou Mermaid | R$ 0,00 |
+| Testes | execução em computadores e celulares dos integrantes | R$ 0,00 |
+| Documentação | produção realizada pela própria equipe | R$ 0,00 |
+
+Neste cenário, o projeto apresenta custo financeiro direto nulo, pois depende principalmente do tempo, da dedicação e da organização da equipe.
